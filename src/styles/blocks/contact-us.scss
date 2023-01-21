@@ -1,0 +1,47 @@
+.contact-us {
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 48px;
+
+    @include onDesktop {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__info {
+    margin: 0 0 24px;
+
+    &--last {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__info-title {
+    font-family: "Poppins", sans-serif;
+    font-style: regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  &__info-link {
+    font-family: "Poppins", sans-serif;
+    font-style: regular;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__field {
+    margin: 0 0 16px;
+  }
+}

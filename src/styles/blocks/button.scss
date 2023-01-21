@@ -1,0 +1,47 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  background-color: #fff;
+  border: #000 solid;
+
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 27px;
+  text-decoration: none;
+  color: #1d1d1d;
+  margin-bottom: 80px;
+
+  @include onDesktop {
+    margin-bottom: 180px;
+  }
+
+  &--send {
+    margin-bottom: 48px;
+
+    @include onTablet {
+      margin-bottom: 120px;
+    }
+    @include onDesktop {
+      margin-bottom: 180px;
+    }
+  }
+
+  cursor: pointer;
+  transition: all $transition-duration;
+
+  &:hover {
+    color: #fff;
+    background-color: #1d1d1d;
+    box-shadow: 0 0 27px rgba(236, 240, 244, 0.46);
+  }
+
+  &:active {
+    box-shadow: 0 0 67px rgba(236, 240, 244, 0.46);
+  }
+}
