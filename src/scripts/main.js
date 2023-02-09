@@ -73,7 +73,7 @@ function requestHTMLReadme(repo, outDiv) {
   const request = new XMLHttpRequest();
   request.open('GET', `${apiRoot}/repos/${myUser}/${myRepo}/readme`);
   request.setRequestHeader('Accept', 'application/vnd.github.v3.html');
-  request.setRequestHeader('Authorization', 'Bearer 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');
+  request.setRequestHeader('Authorization', 'Bearer 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');
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
       boxOut.innerHTML = request.response;
@@ -87,7 +87,7 @@ async function getRepoInfo(repo) {
 
   const graphQLClient = new GraphQLClient(endpoint, {
     headers: {
-      authorization: 'Bearer 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',
+      authorization: 'Bearer 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',
     },
   });
 
