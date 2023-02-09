@@ -1,10 +1,27 @@
 .container {
-  margin: 0 auto;
-  max-width: 1260px;
-  padding: 0 20px;
-
-  &--black {
-    background-color: $color-text-menu;
+  position: relative;
+  max-width: 1440px;
+  
+  &--extra {
+    margin: 0 auto 60px;
+    border-radius: 49px;
+    background: rgb(24,47,64);
+    background: linear-gradient(0deg, rgba(24,47,64,1) 5%, rgba(14,10,16,1) 100%);
+    -webkit-box-shadow: 0px 0px 131px 20px rgba(41,140,153,1);
+    -moz-box-shadow: 0px 0px 131px 20px rgba(41,140,153,1);
+    box-shadow: 0px 0px 131px 20px rgba(41,140,153,1);
+    overflow: hidden;
+    padding: 20px;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.03);
+    }
   }
-
 }
+
+
+
+
+
+
+

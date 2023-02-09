@@ -1,0 +1,44 @@
+.contact {
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 48px;
+    @include onTablet {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    @include onDesktop {
+      font-size: 64px;
+    }
+  }
+
+  &__info {
+    margin: 24px 0;
+  }
+
+  &__info-title {
+    font-family: "Poppins", sans-serif;
+    font-style: regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  &__info-link {
+    font-family: "Poppins", sans-serif;
+    font-style: regular;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__field {
+    margin: 0 0 16px;
+  }
+}

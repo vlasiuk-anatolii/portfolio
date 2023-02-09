@@ -7,31 +7,12 @@
   height: 56px;
   border-radius: 40px;
   background-color: #fff;
-  border: #000 solid;
-
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
-  font-family: inherit;
   font-weight: bold;
   line-height: 27px;
   text-decoration: none;
-  color: #1d1d1d;
-  margin-bottom: 80px;
-
-  @include onDesktop {
-    margin-bottom: 180px;
-  }
-
-  &--send {
-    margin-bottom: 48px;
-
-    @include onTablet {
-      margin-bottom: 120px;
-    }
-    @include onDesktop {
-      margin-bottom: 180px;
-    }
-  }
-
+  color: rgb(24,47,64);
   cursor: pointer;
   transition: all $transition-duration;
 

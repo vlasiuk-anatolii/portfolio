@@ -1,0 +1,139 @@
+.slider {
+  position: relative;
+  
+  &__content {
+    display: flex;
+  }
+
+  &__slider-box {
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  &__card {
+    width: 350px;
+    margin: 0 25px;
+    border-radius: 15px;
+    background: rgb(24,47,64);
+    background: linear-gradient(180deg, rgba(24,47,64,1) 5%, rgba(14,10,16,1) 100%);
+    -webkit-box-shadow: inset 0px 0px 31px 1px rgba(41,140,153,1);
+    -moz-box-shadow: inset 0px 0px 31px 1px rgba(41,140,153,1);
+    box-shadow: inset 0px 0px 31px 1px rgba(41,140,153,1);
+  }
+
+  &__img {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 40px;
+    
+    @include onTablet {
+      font-size: 48px;
+      padding: 5px 40px 40px;
+    }
+    
+    @include onDesktop {
+      font-size: 64px;
+      line-height: 100px;
+    }
+  }
+
+  &__title-card {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+
+    @include onTablet {
+      font-size: 32px;
+      padding: 20px;
+    }
+
+    @include onDesktop {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  &__created {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px 5px;
+  }
+
+  &__discribe {
+    padding:20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  &__arrow-prev-button-box,
+  &__arrow-next-button-box {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+
+  &__arrow-next-button-box {
+    right: 20px;
+  }
+
+  &__arrow-prev,
+  &__arrow-next {
+    width: 30px;
+    height: 50px;
+    transition-duration: 0.5s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__arrow-next {
+    right: 0
+  }
+
+  &__language-box,
+  &__topics,
+  &__total-size {
+    padding: 0 20px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  &__language-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__language-item-percent {
+    color: #18c424;
+  }
+
+  &__topics {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__total-size {
+    padding: 0 20px;
+  }
+}
