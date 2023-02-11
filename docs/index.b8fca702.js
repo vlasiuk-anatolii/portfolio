@@ -563,6 +563,7 @@ var _graphqlRequest = require("graphql-request");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 const API_KEY = "55027109427c6feac223bc5b1ce4918fe459d88071bcc00e3cc696a398c1eeb8";
+const API_GIT = "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";
 const projects = [
     "comments",
     "job-list",
@@ -575,7 +576,8 @@ const projects = [
     "List-of-users",
     "my-bike-landing",
     "Air-landing",
-    "museum-landing"
+    "museum-landing",
+    "todo"
 ];
 const contentBoxSlider = document.querySelector(".slider__content");
 const buttonNext = document.querySelector(".slider__arrow-next-button-box");
@@ -615,14 +617,15 @@ function accord(array, classActiveName) {
     });
 }
 function requestHTMLReadme(repo, outDiv) {
-    const apiRoot = "https://api.github.com";
+    //https://${token}@github.com/${owner}/${repo}.git
+    const apiRoot = `https://api.github.com`;
     const myUser = "vlasiuk-anatolii";
     const myRepo = `${repo}`;
     const boxOut = outDiv;
     const request = new XMLHttpRequest();
     request.open("GET", `${apiRoot}/repos/${myUser}/${myRepo}/readme`);
     request.setRequestHeader("Accept", "application/vnd.github.v3.html");
-    request.setRequestHeader("Authorization", "Bearer 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");
+    request.setRequestHeader("Authorization", `Bearer ${API_GIT}`); //'Bearer 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');
     request.onreadystatechange = ()=>{
         if (request.readyState === 4 && request.status === 200) boxOut.innerHTML = request.response;
     };
@@ -632,7 +635,7 @@ async function getRepoInfo(repo) {
     const endpoint = "https://api.github.com/graphql";
     const graphQLClient = new (0, _graphqlRequest.GraphQLClient)(endpoint, {
         headers: {
-            authorization: "Bearer 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"
+            authorization: `Bearer ${API_GIT}` //'Bearer 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',
         }
     });
     const query = (0, _graphqlRequest.gql)`
